@@ -1,4 +1,4 @@
-name: toktok
+name: Build APK
 
 on:
   workflow_dispatch:
@@ -21,9 +21,21 @@ jobs:
           gradle-version: 8.9
 
       - name: Compilar APK de depuración
-        run: gradle assembleDebug
+        run: |
+          FILE=$(find . -name settings.gradle.kts -not -path './.git/*' | head -n 1)
+          if [ -z "$FILE" ]; then
+            echo "No se encontro settings.gradle.kts. Esto es lo que hay en el repositorio:"
+            find . -maxdepth 3 -not -path './.git/*' | head -n 60
+            exit 1
+          fi
+          DIR=$(dirname "$FILE")
+          echo "Proyecto encontrado en: $DIR"
+          cd "$DIR"
+          gradle assembleDebug
+          mkdir -p "$GITHUB_WORKSPACE/salida"
+          cp app/build/outputs/apk/debug/app-debug.apk "$GITHUB_WORKSPACE/salida/"
 
       - uses: actions/upload-artifact@v4
         with:
           name: VozTikTok-apk
-          path: VozTikTok/app/build/outputs/apk/debug/app-debug.apk
+          path: salida/app-debug.apk
