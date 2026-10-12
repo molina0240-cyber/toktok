@@ -1,4 +1,4 @@
-name: Build APK
+name: toktok
 
 on:
   workflow_dispatch:
