@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Voz para TikTok</string>
+
+    <string name="accessibility_label">Voz para TikTok</string>
+    <string name="accessibility_description">Permite deslizar, pausar y dar me gusta en TikTok con comandos de voz. Solo actúa cuando TikTok está abierto.</string>
+
+    <string name="notif_channel">Asistente de voz</string>
+    <string name="notif_title">Asistente de voz activo</string>
+    <string name="notif_text">Escuchando comandos para TikTok</string>
+
+    <string name="title">Voz para TikTok</string>
+    <string name="instructions">Pasos para quien ayuda a instalar:\n1. Permite el micrófono cuando lo pida.\n2. Toca \"Abrir ajustes de accesibilidad\", entra a \"Voz para TikTok\" y actívalo.\n3. Listo. Para iniciar solo con la voz: \"Ok Google, abre Voz para TikTok\".</string>
+
+    <string name="btn_accessibility">Abrir ajustes de accesibilidad</string>
+    <string name="start_assistant">Iniciar asistente</string>
+    <string name="stop_assistant">Detener asistente</string>
+
+    <string name="wake_switch">Pedir palabra clave antes de cada comando</string>
+    <string name="wake_label">Palabra clave</string>
+    <string name="wake_hint">asistente</string>
+    <string name="wake_help">Evita que el audio de los videos active comandos por error. Se dice la palabra clave y después el comando, por ejemplo: \"asistente, siguiente\".</string>
+
+    <string name="status_format">Micrófono: %1$s\nAccesibilidad: %2$s\nAsistente: %3$s</string>
+    <string name="ok_allowed">permitido</string>
+    <string name="missing_permission">falta permiso</string>
+    <string name="ok_active">activa</string>
+    <string name="missing_enable">falta activarla</string>
+    <string name="state_listening">escuchando</string>
+    <string name="state_off">apagado</string>
+
+    <string name="mic_denied">Sin permiso del micrófono el asistente no puede escuchar.</string>
+</resources>
